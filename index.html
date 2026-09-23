@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get the Hypnosis Downloads App</title>
+<meta name="robots" content="noindex">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f2ef;
+    color: #2b2b2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    text-align: center;
+  }
+  .card {
+    max-width: 420px;
+    width: 100%;
+  }
+  .spinner {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 20px;
+    border: 3px solid #ddd;
+    border-top-color: #4a7c6f;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  h1 {
+    font-size: 20px;
+    margin: 0 0 8px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 24px;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  a.btn {
+    display: block;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  a.btn-primary {
+    background: #4a7c6f;
+    color: #fff;
+  }
+  a.btn-secondary {
+    background: transparent;
+    color: #4a7c6f;
+    border: 1px solid #4a7c6f;
+  }
+  noscript p {
+    color: #b3261e;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="spinner" id="spinner"></div>
+    <h1>Taking you to the app&hellip;</h1>
+    <p>If nothing happens in a moment, choose an option below.</p>
+
+    <div class="links">
+      <a class="btn btn-primary" id="primary-link" href="https://www.hypnosisdownloads.com/user/reg/first-time">
+        Get Your Free First Session
+      </a>
+      <a class="btn btn-secondary" href="http://itunes.apple.com/gb/app/hypnosis-downloads/id658735310?pt=2126412&amp;ct=HD%20App%20page&amp;mt=8">
+        Download on the App Store
+      </a>
+      <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.uncommonknowledge.hypnosisapp">
+        Get it on Google Play
+      </a>
+    </div>
+
+    <noscript>
+      <p>JavaScript is disabled, so we can't auto-detect your device. Please choose a link above.</p>
+    </noscript>
+  </div>
+
+  <script>
+    (function () {
+      var IOS_URL = "http://itunes.apple.com/gb/app/hypnosis-downloads/id658735310?pt=2126412&ct=HD%20App%20page&mt=8";
+      var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.uncommonknowledge.hypnosisapp";
+      var FALLBACK_URL = "https://www.hypnosisdownloads.com/user/reg/first-time";
+
+      // Pass through any query string (e.g. UTM params) onto the fallback destination,
+      // so the source of a scan (e.g. utm_source=im_email) is preserved wherever we land.
+      function appendQuery(url, search) {
+        if (!search) return url;
+        var joiner = url.indexOf("?") === -1 ? "?" : "&";
+        return url + joiner + search.replace(/^\?/, "");
+      }
+
+      var ua = navigator.userAgent || navigator.vendor || window.opera || "";
+      var search = window.location.search;
+
+      var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+      // iPadOS 13+ reports as "MacIntosh" with touch support — catch that case too.
+      var isIPadOS13 = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+      var isAndroid = /Android/.test(ua);
+
+      var destination = null;
+
+      if (isIOS || isIPadOS13) {
+        destination = IOS_URL; // App Store links aren't good candidates for UTM passthrough
+      } else if (isAndroid) {
+        destination = ANDROID_URL;
+      } else {
+        destination = appendQuery(FALLBACK_URL, search);
+      }
+
+      // Update the primary button in case JS redirect is blocked/delayed but the page still renders.
+      document.getElementById("primary-link").href = destination;
+
+      window.location.replace(destination);
+    })();
+  </script>
+</body>
+</html>

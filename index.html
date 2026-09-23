@@ -5,13 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get the Hypnosis Downloads App</title>
 <meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+  :root {
+    --hd-red:      #c4302c;
+    --hd-white:    #ffffff;
+    --hd-grey:     #989487;
+    --hd-dark:     #221e1f;
+    --hd-light-bg: #f5f4f2;
+    --hd-orange:   #f8981d;
+    --hd-green:    #70b445;
+    --hd-blue:     #219fda;
+    --font: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
   * { box-sizing: border-box; }
+
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f4f2ef;
-    color: #2b2b2b;
+    font-family: var(--font);
+    background: var(--hd-light-bg);
+    color: var(--hd-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,59 +36,90 @@
     padding: 24px;
     text-align: center;
   }
+
   .card {
     max-width: 420px;
     width: 100%;
   }
+
+  .logo {
+    width: 180px;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto 28px;
+    display: block;
+  }
+
   .spinner {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     margin: 0 auto 20px;
-    border: 3px solid #ddd;
-    border-top-color: #4a7c6f;
+    border: 3px solid #e3e0da;
+    border-top-color: var(--hd-orange);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
+
   h1 {
+    font-family: var(--font);
+    font-weight: 700;
     font-size: 20px;
+    color: var(--hd-dark);
     margin: 0 0 8px;
   }
+
   p {
+    font-family: var(--font);
     font-size: 15px;
     line-height: 1.5;
-    color: #555;
+    color: var(--hd-grey);
     margin: 0 0 24px;
   }
+
   .links {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
+
   a.btn {
     display: block;
     padding: 14px 20px;
-    border-radius: 8px;
+    border-radius: 4px;
     text-decoration: none;
+    font-family: var(--font);
     font-weight: 600;
     font-size: 15px;
   }
+
   a.btn-primary {
-    background: #4a7c6f;
-    color: #fff;
+    background: var(--hd-orange);
+    color: var(--hd-white);
   }
+  a.btn-primary:hover { background: #e08010; }
+
   a.btn-secondary {
-    background: transparent;
-    color: #4a7c6f;
-    border: 1px solid #4a7c6f;
+    background: var(--hd-green);
+    color: var(--hd-white);
   }
+  a.btn-secondary:hover { background: #5a9438; }
+
+  a.btn-outline {
+    background: transparent;
+    color: var(--hd-dark);
+    border: 1px solid var(--hd-grey);
+  }
+
   noscript p {
-    color: #b3261e;
+    color: var(--hd-red);
   }
 </style>
 </head>
 <body>
   <div class="card">
+    <img class="logo" alt="Hypnosis Downloads" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABdAPYDASIAAhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAMGBQcBAgQI/8QAPhAAAQMDAgMGAwQIBQUAAAAAAQIDBAAFEQYhEjFBEyJRYXGBBxQyI0KRwRUzYnKCobHRCDQ1UrIWQ3OS8f/EABsBAQACAwEBAAAAAAAAAAAAAAAEBgEDBQIH/8QAMBEAAgEDAgQEBQQDAQAAAAAAAAECAwQRBSESMUFhE1FxkQYyocHwIoGS4UJygtL/2gAMAwEAAhEDEQA/APjKlKUApSt2fALSuk5mjr3qrU8JuW3FccZIdBKW20tpUpQSOajxbHmMbYNQr+9hZUfFkm+SwubbJdlZyu6vhxaXN5fLCNJ0q362g6akPfN6WhXS3tKUQI8shaFDxQvOf4Tn16VUVJUlRSoEEcwak0qniQUsNdnzNFSHhyccp90cUrs2hS1hCBlROAKumkdFXO6sl+LY3bigHCnFudk0D4A5GfxrNSpGnHik8I0ykorLKTStlL0bBlXIafm2p/Tt4eTmG52xcYfV0SrizjOMBSVHfmK1zKYdjSXY0hstvNLKHEHmlQOCPxrxTrRqPC/F57GIVFLZEdKUrcexSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFbl+C0lUz4T67sLe7qI5lISOoLZB/4CtNVsb/AA73VqB8RmYUlWI91juQVgnYlQBT/NIHvXL1im5WkpJbxxL+Lz9jo6VNRuoxfKWY/wAlg3r8LoVp1B8I7VBnw2JkYNracQ4nI4krUCR4Hrkb1qD4w/C9/Tizcbf2ki0rVhDh3XHJzhDmB9Pgr2O/PZP+H95Vvb1DpKQo9tbLgpSEnnwHuH2yjP8AFWzpcdiXFdiymW32HkFDrbieJK0kYII6iqNLU62k6lU4XmDeceae6a74fMuUdOo6np9PiWJpYz5NbY9Mo+HrO0lFwKJHEgAd4gbgZGSPavrq1tQ2bZGatwbENDSQx2e6eDG2MVof4vaIf0dqBMmCgu26QSqKtYJHiphZ8R06kb8wawVuuMRUYMuq1BFQrnHZlI7P0GQP5g+9XK5pQ1SjTq0pfp9M/jR831PT6iqeFPZxNn/EidEvesNO2izupkXCLL7R5xo5S0nKSQVDbbhJPhjfnWmPiJNiXHXF5mwFJXGdlrU2pPJQzzHkefvVpT+k37c5brHal2qG+nged4j276f9q3VAd39lCUjxzXli6Icx9quK3/7LP5VvtadO2STlyWO+7y84+iJ1hoN9US8OlJrpnbvze31KDSthytGMtR1uGVFSEjJK2+ED3ztWLTYbZI03JuCyqG7HyEr4jwObbDB652261NVxTaynknT0O8p1PDqR4XhvdrdLnyyvfBUK7IHEtKT1OK613Z/XI/eFbzkHMlsNSHG0kkJUQCajr3S2WhKcU+6UcSiQlIyceNQPMJQEOIc42lHHEBuPIigIKVJIaLLvDniBGUnxHjXKGsx1vKVgA8KR4mgIqV63I8ZlZQ7IVnwSjlXR6OEtdsy4HG+RPIj1FAeeleluMFMIeU4EIJPESOWP61z8uy4lXy7xUtIzwqTjI8qA8tKkjsreXwpwABlSjyA86m7KITwiSri8Sju0B5aVK4w428GiAVKxw45HNSliMlXZrkEODYkJ7oPrQELaUKbcK18KkjKR4mo6mQzxIeVxj7MZ25HfFctsthoOvuFCVHCQkZJoCClSvobRgtuhaT5YI9aioBSlKAUpSgFTwJT0GcxNjLKH47qXW1DopJyD+IqCvfZbXIujyw2UtMNAKffc2Q0nxPmegG56VlQ4/wBOM5MOaguJvGDeZ1CxA1bYvibCSP0VfGRFuqUb9i/gBwHzHClQ8eA+NWrUnxWYVMVaNFW9y/XEjCXUpJjp6Z23UPPZP7Var0Xp+fd7aq0QXpMTTnbh2Q659Up1O2QnkMDkBsOpUasdrjaq0G++LVBZvVqeXxqSlHC8n1I35D9oeQrjV/g6dSlG4dPxOHZb4TXTPV45Z5PHMmT+MXRc6FGSjOW7T6Prh8lnnjmjIzNE6p1UhyZrDUSw/wAJMaIwcssrwcZH0jnvgE4+9VV0vGYRElQ3YLUe7W1wtyhwd5aOLAXnrg9046FJ61bR8WILY4JWnLyy91QEoO/uQf5VTtVXybOvv/Vdp0/Mt6W2eykrkIKm3ge73xgDkcczyHhWi0tr2SlSnT4YrljCSx026P8AsiaVq11bX0bmvvv1a37fv074MwpQSkqUoADmSdhWGnaihtL7GGlU148g3un8evtmqZdb4la8TJMiY4P+0nuIT6n+w96w0q8zHUFpopitHmhnu8XqeZ9zU2nYr/Lf89y+33xbJrFBcK8+cv8Ayvd+hZr1dwpebxKKsHKYcZW4P7R5J98nyFVu83qXcghlQSxFb/Vx2tkJ8z4nzNYylTo0oxKhcahVrcW/Pnvlv1f2WF2Fd2f1yP3hXSuyDwrSrwOa2EEln/5179812H+mK/8AMP8AiaikOB19bgGApROK5Do+VLODkrCs+2KAmbBkxg2N3Wj3fNJ6e1dZqgFJjoOUtDHqeprmJ9i05JPMdxHmo/2ry0B6bn/nV+39BXNvzh8H6OyPF+VSzjG+ZWHW3AoY3Sob7edQOvo7IssN8CD9RJyVetAcvf6fH/eX+VLZ/nmvU/0qNx0KjNNYOUFRJ8c4pFdDMhDpBISeVAStbW14p58aQr0/+15aljvqZWSAFJUMKSeRFS8cLPF2Luf9vEMf3oDs8pSYkVZPfSSU+gO1cH5eSvJyy6r3QT+VROvl15K1pHCnACBsAPCpEuQ0qC0sulQ3CSoYzQHLCFIZloUMFKQD+NdGnm1NBl9CilP0qTzH96JkEh8rGVOjmOm+a4bVGKAHWlhQ+8hXP2NDJxIZDaUrQsLbXyOMexqGppDyVoQ02gobRnAJyST1NQ0MClKUApSvRboj8+exBio4333Ettp8STgVlJt4RhtRWWeuwWhy6PuKU4I8OOAuTIUMhtJOAAOqidgnqfcjZ+iNKJvbbLzsdcOwMKywxnvyVdVrI5k8ir2TgV1sunY03UKNLR8i02jvzFjYyntgpR67nKR4JSfGtsNoQ02lttCUIQAlKUjAAHICrRpWlRm3Kp8q29Wvsvq+xUdY1iVNKNP5ms/6p8v+mvZd8s4YaaYZQyy2htptIShCRgJA6AV3qKXJjxGFPyn22Gk81uKCR+Jqg6o+JsKIQ1ZkIkqCsKfeBS36JGxPrsPWrDc3lC1jmpLHbr7FZtbG4vJYpRz36fuzYfvUUthmXGdjSEBxl1BQtJ5EEYIrC6Q1Tb9RRvsT2MxCcux1HJT5pP3k+f44rP1upVadeHFB5TNFWjVt6jhNYkj5u+IFgest4firyoNHKF4+to/Sr8j5g1Vq+ifipYBdrEZjDfFKhArAHNbf3k/n7edfPktksPqRzTzSfEVQNUsnaV3FfK916f0fSdJv1e2ym/mWz9fP9yGlKVzjpilKyelLQu/ajgWdtzszKeShS8Z4E81K9hk+1AYys7rK2xLZKtrcRCkpftcWS5xKzlxxoKUfTJ5VlJ2q7dBluQrHpmym2NqKEmZG7d6QkH61uHcE88JxjO1Z28262XjVcaZMYVHtUDTUa4OxWVkktpaQEspUd9ypKeI743oDW8h1K0NtoBCEJ69T1NQ1cG9ZwnJHYS9I2FVqJwYzUfgdSj9l7PHxY6kn0rIXTTUBlu/WKIEvPx2m7vbJBQA47GKAVtqPXCFBWPFB8aAost0PSFOJBAOOfpUNX34e6et1wsUs3JtJlXZxUC0qP3HkoLhX6ZDaP4zWI0XCjss3W/XKMh+Na2MJYdTlLshzKG0kHoDxLP7lAVmsjpiKzO1Ja4UlJUxImNNOAHBKVLAO/TY1cNRXK26bZsybZYLY5OkWmK8/IlRw6nvI+6g93J3KlEEnO2MbksQJF50RqKHBZgOXGeG5MdgENBxp5A4kA/SFBQ25Ag0BTL/Hah324RGAQ0xKcbQCckJSogb+grw1ffk7bDk6l1TdoSZ6I11XFhxFrKW3HlKWoqXjcpSlOcdSQOVR2K923Ut0Ysd9sVqjtTFhhiXAjBh2K4rZB7uy05IylXTrQFGpVpsabjb7jLsts09FuV3akLQp5cb5goSg8JCUKygDIzxEdeYrN6o0y9OmaSadtrFput4cXHlNsoCW+JLiUhzgBwklKskDA25CgNd1n9Z2yJbFWcREKT81aY8p3iVnLiweI+Q25Vlbpqe3Wqc9bLDpyzqt8dZa7SbGD70nhOCtalbpzzwnGKsNzatdz1dZlOwYiSrTTLtvguukMLkcJLbSlEg8Oc7EjOACd6A1VSrNrCbOINtvemoNtuLSwpLrMT5ZfBuOEpThKknbBxnbmc1WaAUpSgFe6w3J6z3mJc46UqdjOhxKVcjjofWvDSvUZOLUlzR5lFTi4y5Mu83W4ReH7vY1TrY/L70lruOICuuCeYzvunbJrq/8RtRuDBvEzHglDaP5hNUqlb3eV8vE2s+TaXsR1ZW+FmCeNstJv3e5lblfZs97tpDrjrnRbyytQ9M8qxrri3VcTiio+ddKVHbbeWSUklhGQtN0kW+Q06064hTauJtaDhSD4g1ubRPxHjTUNxb2tDTpwlEoDCFn9sfdPny9K0TUjDzjC+JtWPEdDUuzv61nPipvbqujIV9p9C9hw1Vv0fVfnkfWoIUkEEKBGQRuCK0D8V9Ofoe9OBhvEZ0F6Pjok/Un2P8ALFS6G1/Os5RGUfmInIxnFY4fNCunpy/rV11tcbJqvR7smFJb+bhfbJZdPC4ByWMddt9sjYV37y6t9TtXjacd8P648yu2Nnc6TeJP9VOW2V9M+W/3NFUqWU2GpC2xyB29KiqqFwFZDTd1fsd+g3eOkLciPJdCDyWAd0nyIyPesfSgLlcbBpy4yXLnZ9VW2HBdUXFxpwcQ/GzuUBKUntMcgU86yU3UNjhapZbTJXcbPIsLFqlPNIKFhPZpBWEnkpKkpVjyxmtd0oC3p0tp9p8SpOt7Wu15zlhtwyljwDJT3VepwPGoZmrlq18zqSJGLTEZbaGI6jnEdCQgNk+aAQfU1VqUBcNfXaAzebdC0vJV+jbQ2FRHQckurV2ql+oUQP4K9HxMvlpnRokSxYSxKcVdJyU8hJdABR/AAR/Eao9KAsWup0Sc/aFQ30vBizxWHCnPdcSjCk79Qayduu1ubt+h21y0JVAubz0oEH7JBdaIUdvBJO3hVKpQF4jXizTntQWC6yzHt8+4KmRJyGysMuhSgCpI3KFJVg43G21LPbLDpi4tXu5aitt0VEWHokK3qWtT7id0caikBCc4Jzk7YxVHpQF7iTW79pB6A3fYVpnvXB2XcUSVqaTMSoJ4SFgEEJPF3D45G9eiZOtNq0/piXbNQxZkyxyXXexS0tKnnC6heACBhvAPeOM45eGvKUBdbrY9O3mY7drRqi2wIz6y67EuHGh6MVblAwkhwDJwRzrvqpNgvF6tcNjUkdqNGs7EdEt2O4EKdRkcKgASjnnODiqPSgLxfZLFu0MvT8zUEW+yjJbchojKU43CQAriw4oD6sgcA2GM1R6UoBSlKAUpSgFKUoBSlKAUpSgFZO13VEdaUzYaZjI6doULHoofmDWMpWU8PJhrKwey8y2p9yelMREQ2l4CGUKKggAAczuTtknqc146UpJuTyxGKikkKUpWDIpSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUB//Z">
+
     <div class="spinner" id="spinner"></div>
     <h1>Taking you to the app&hellip;</h1>
     <p>If nothing happens in a moment, choose an option below.</p>
@@ -80,10 +128,10 @@
       <a class="btn btn-primary" id="primary-link" href="https://www.hypnosisdownloads.com/user/reg/first-time">
         Get Your Free First Session
       </a>
-      <a class="btn btn-secondary" href="http://itunes.apple.com/gb/app/hypnosis-downloads/id658735310?pt=2126412&amp;ct=HD%20App%20page&amp;mt=8">
+      <a class="btn btn-outline" href="http://itunes.apple.com/gb/app/hypnosis-downloads/id658735310?pt=2126412&amp;ct=HD%20App%20page&amp;mt=8">
         Download on the App Store
       </a>
-      <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.uncommonknowledge.hypnosisapp">
+      <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.uncommonknowledge.hypnosisapp">
         Get it on Google Play
       </a>
     </div>
